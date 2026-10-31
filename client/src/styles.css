@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #23332d;
+  background: #f5f4ef;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0 8.3%;
+}
+
+.topbar {
+  display: flex;
+  min-height: 94px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4e3db;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  font-family: "Manrope", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.wordmark-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 11px;
+  background: #a7c7a1;
+  color: #23332d;
+  font-size: 20px;
+}
+
+.topbar-note,
+.footer {
+  color: #788078;
+  font-size: 13px;
+}
+
+.welcome {
+  width: min(100%, 790px);
+  margin: auto;
+  padding: 110px 0 130px;
+}
+
+.eyebrow {
+  margin: 0 0 21px;
+  color: #648361;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 600;
+  letter-spacing: -4px;
+  line-height: 1.12;
+}
+
+h1 span {
+  color: #789673;
+}
+
+.intro {
+  max-width: 480px;
+  margin: 25px 0 30px;
+  color: #707970;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.api-status {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  border: 1px solid #e4e3db;
+  border-radius: 99px;
+  background: #faf9f5;
+  color: #667068;
+  font-size: 12px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d3a855;
+}
+
+.api-status--connected .status-dot {
+  background: #6b9b68;
+}
+
+.api-status--unavailable .status-dot {
+  background: #c36c5e;
+}
+
+.footer {
+  display: flex;
+  min-height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e4e3db;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 0 7%;
+  }
+
+  .topbar {
+    min-height: 76px;
+  }
+
+  .topbar-note {
+    font-size: 11px;
+  }
+
+  .welcome {
+    padding: 90px 0;
+  }
+
+  h1 {
+    letter-spacing: -2.5px;
+  }
+
+  .intro {
+    font-size: 15px;
+  }
+}

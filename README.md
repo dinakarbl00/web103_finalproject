@@ -91,4 +91,25 @@ Students can open a modal from the dashboard to create a study session without l
 
 ## Installation Instructions
 
-Local setup instructions will be added after the React frontend, Express backend, and PostgreSQL database are configured during development.
+### Prerequisites
+
+- Node.js 20.19 or later
+- npm
+
+### Run the app locally
+
+1. Install the project dependencies from the repository root:
+
+   ```sh
+   npm install
+   ```
+
+2. Start the React frontend and Express API together:
+
+   ```sh
+   npm run dev
+   ```
+
+3. Open the frontend at [http://localhost:5173](http://localhost:5173). The page checks the API at [http://localhost:3001/api/health](http://localhost:3001/api/health).
+
+The frontend proxies `/api` requests to the backend during development. To run either app separately, use `npm run dev --workspace=client` or `npm run dev --workspace=server`. Create a production frontend build with `npm run build` and start the API with `npm start`.
